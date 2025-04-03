@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botana de Kanito | ¡Los antojos más ricos del barrio!</title>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka+One&family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ESTILOS MEJORADOS */
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8F0;
+            color: #5A3921;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .contacto-bar {
+            background-color: #E63946;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em; /* Más grande */
+            font-weight: bold;
+            font-family: 'Fredoka One', cursive;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .contacto-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #FF6B6B, #E63946);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 5px solid #FFD166;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 4em;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2),
+                         6px 6px 0px rgba(0,0,0,0.1);
+            font-family: 'Luckiest Guy', cursive;
+            letter-spacing: 3px;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .slogan {
+            font-size: 2em;
+            margin-top: 10px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            font-family: 'Fredoka One', cursive;
+            color: white;
+        }
+        
+        .whatsapp-number {
+            font-size: 2.2em; /* Más grande */
+            margin-top: 20px;
+            font-family: 'Fredoka One', cursive;
+            color: #FFD700;
+            background-color: rgba(0,0,0,0.3);
+            padding: 15px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+            border: 3px solid white;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            margin-bottom: 120px;
+        }
+        
+        .producto h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.2em;
+            color: #E63946;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+            letter-spacing: 1px;
+        }
+        
+        .producto p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        
+        .producto {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .producto:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        
+        .producto img {
+            width: 100%;
+            border-radius: 12px;
+            height: 220px;
+            object-fit: cover;
+            border: 4px solid #FFD166;
+            margin-bottom: 15px;
+        }
+        
+        .bebida img {
+            object-fit: contain;
+            background: white;
+            height: 240px;
+        }
+        
+        .destacado {
+            background-color: #FFD166;
+            color: #E63946;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+            font-size: 1.1em;
+            font-family: 'Fredoka One', cursive;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 18px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 15px 0;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            font-family: 'Fredoka One', cursive;
+            letter-spacing: 1.5px;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #5A3921, #3A2911);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .horario {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- BARRA DE CONTACTO MEJORADA -->
+    <div class="contacto-bar">
+        <div class="contacto-info">
+            <div class="contacto-item">
+                📍 <span>Pozo del Oro 121, Fracc. Poza Bravo Sur</span>
+            </div>
+            <div class="contacto-item">
+                🕒 <span>5PM - 10PM (Lunes a Sábado)</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1>BOTANA DE KANITO</h1>
+        <p class="slogan">¡Los antojos más ricos del barrio!</p>
+        <div class="whatsapp-number">📱 PEDIDOS: 449 919 9020</div>
+    </header>
+
+    <div class="menu">
+        <!-- DULCES -->
+        <div class="producto">
+            <h2>Dulces</h2>
+            <img src="./imagenes/dulces.jpg" alt="Variedad de dulces">
+            <p>Tamarindos, chicles, paletas y más</p>
+        </div>
+
+        <!-- PAPAS -->
+        <div class="producto">
+            <h2>Papas</h2>
+            <img src="./imagenes/papas.jpg" alt="Papas y botanas">
+            <p>Fritas, chidas, sabritas y mas</p>
+        </div>
+
+        <!-- TORTAS -->
+        <div class="producto">
+            <h2>Tortas</h2>
+			<span class="destacado">¡Nuevo!</span>
+            <img src="./imagenes/tortas.jpg" alt="Tortas a la plancha">
+            <p>Jamón</p>
+        </div>
+
+        <!-- MANGONADA -->
+        <div class="producto">
+            <h2>Mangonada</h2>
+            <img src="./imagenes/mangonada.jpg" alt="Mangonadas refrescantes">
+            <span class="destacado">¡Nuevo!</span>
+            <p>Con chamoy, limón y chile en polvo</p>
+        </div>
+
+        <!-- DUROS PREPARADOS -->
+        <div class="producto">
+            <h2>Duros Preparados</h2>
+            <img src="./imagenes/duros.jpg" alt="Duros preparados">
+            <span class="destacado">¡Especialidad!</span>
+            <p>Lechuga, cueritos, zanahoria, crema, salsa casera</p>
+        </div>
+
+        <!-- BIONICOS -->
+        <div class="producto">
+            <h2>Biónicos</h2>
+            <img src="./imagenes/bionicos.jpg" alt="Biónicos frescos">
+            <p>Manzana, melón, papaya, guayaba, fresa (en temporada), granola y lechera</p>
+        </div>
+
+        <!-- SALCHIPÚLPOS -->
+        <div class="producto">
+            <h2>Salchipulpos</h2>
+            <img src="./imagenes/salchipulpos.jpg" alt="Salchipulpos deliciosos">
+            <span class="destacado">¡Especialidad de la casa!</span>
+            <p>Salchicha cortada en forma de pulpo con papas y toppings</p>
+        </div>
+
+        <!-- SALCHIPAPAS -->
+        <div class="producto">
+            <h2>Salchipapas</h2>
+            <img src="./imagenes/salchipapas.jpg" alt="Salchipapas crujientes">
+            <p>Papas fritas con salchicha, salsas y toppings</p>
+        </div>
+
+        <!-- HOTDOGS -->
+        <div class="producto">
+            <h2>Hotdogs</h2>
+            <img src="./imagenes/hotdogs.jpg" alt="Hotdogs clásicos">
+            <span class="destacado">¡Nuevo!</span>
+            <p>Pan suave con salchicha, cebolla, tomate, mayonesa, mostaza y catsup</p>
+        </div>
+
+        <!-- MINICHASCAS CON ELOTE AMARILLO -->
+        <div class="producto">
+            <h2>Minichascas</h2>
+            <img src="./imagenes/chascas.jpg" alt="Minichascas con elote amarillo">
+            <span class="destacado">¡Especialidad!</span>
+            <p>Minichascas preparadas con elote amarillo, mayonesa, queso, chile y limón</p>
+        </div>
+
+        <!-- COCA-COLA 1.5L RETORNABLE -->
+        <div class="producto bebida">
+            <h2>Coca-Cola 1.5L</h2>
+            <img src="./imagenes/coca1.5.png" alt="Coca-Cola retornable">
+            <span class="destacado">Envase retornable</span>
+            <p>Refresco clásico de 1.5 litros</p>
+        </div>
+
+        <!-- REFRESCOS -->
+        <div class="producto bebida">
+            <h2>Refrescos</h2>
+            <img src="./imagenes/refrescos.jpg" alt="Bebidas variadas">
+            <p>Jarritos, aguas frescas y más</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="horario">
+            📞 Pedidos: 449 919 9020
+        </div>
+        <a href="https://wa.me/524499199020" class="whatsapp-btn">
+            📱 Ordena por WhatsApp
+        </a>
+    </footer>
+</body>
+</html>
